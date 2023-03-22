@@ -23,7 +23,7 @@ public class Bishop extends ChessPiece{
 		Position p = new Position(0, 0);
 		
 		// NOROESTE
-		p.setValue(position.getRow() - 1, position.getColumn());
+		p.setValue(position.getRow() - 1, position.getColumn() - 1);
 		while (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
 			mat[p.getRow()][p.getColumn()] = true;
 			p.setValue(p.getRow() - 1, p.getColumn() - 1);;
